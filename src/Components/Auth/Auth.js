@@ -6,6 +6,7 @@ import validEmailRegex from '../../utils/emailRegex'
 import './Auth.css'
 import { AuthContext } from '../../context/auth-context'
 import Spinner from '../../Containers/Spinner/Spinner';
+
 export class Auth extends Component {
     static contextType = AuthContext
     constructor(props) {

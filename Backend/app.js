@@ -14,7 +14,10 @@ const profileRoutes = require("./Routes/profile");
 const app = express()
 
 const PORT = process.env.PORT || 3001
-
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
 
 app.use(express.json())
 app.use(header_middleware)
@@ -27,7 +30,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/profile", profileRoutes);
 
 
-app.get('/test', (req, res) => {
+app.get('api/test', (req, res) => {
     res.send('Hello World!')
 })
 
